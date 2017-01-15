@@ -12,7 +12,7 @@ class UmumController extends Controller
       $this->middleware('auth');
   }
 
-  public function index()
+  public function edit()
   {
       return view('pengaturan.umum.identitas');
   }

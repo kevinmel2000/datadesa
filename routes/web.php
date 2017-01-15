@@ -5,4 +5,4 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 // pengaturan umum
-Route::get('pengaturan/umum', 'Pengaturan\UmumController@index');
+Route::get('pengaturan/umum', 'Pengaturan\UmumController@edit');
