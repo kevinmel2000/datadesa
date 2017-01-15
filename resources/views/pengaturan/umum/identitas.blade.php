@@ -13,7 +13,7 @@
                 <div class="panel-body">
                   <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active">
-                      <a href="#form" aria-controls="form" role="tab" data-toggle="tab">
+                      <a href="#identitasdesa" aria-controls="form" role="tab" data-toggle="tab">
                         <i class="fa fa-address-card"></i> Identitas Desa
                       </a>
                     </li>
@@ -29,8 +29,12 @@
                     </li>
                   </ul>
                   <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="form">
-                      
+                    <div role="tabpanel" class="tab-pane active" id="identitasdesa">
+                      <p>
+                        {!! Form::model($identitas, ['url'=>route('pengaturan.update', $identitas->id), 'method'=>'put', 'files'=>'true', 'class'=>'form-horizontal']) !!}
+                        @include('pengaturan.umum._formidentitas')
+                        {!! Form::close() !!}
+                      </p>
                     </div>
                   </div>
                 </div>
