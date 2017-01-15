@@ -46,6 +46,7 @@
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
                           {!! Html::smartNav(url('/home'), 'Dashboard') !!}
+                          {!! Html::smartNav(url('pustaka/agama'), 'Pustaka') !!}
                           {!! Html::smartNav(url('pengaturan/umum'), 'Pengaturan') !!}
                         @endif
                     </ul>

@@ -13,3 +13,5 @@ Route::put('pengaturan/umum', [
   'as'=>'pengaturan.update',
   'uses'=>'Pengaturan\UmumController@update'
 ]);
+// pustaka
+Route::resource('pustaka/agama','Pustaka\AgamaController');
