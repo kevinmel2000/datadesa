@@ -19,9 +19,11 @@ class UmumController extends Controller
     return view('pengaturan.umum.identitas')->with(compact('identitas'));
   }
 
-  public function update(Request $request, $id)
+  public function update(Request $request)
   {
-    $identitas = Identitas::find($id);
-    $user->save();
+    $data=$request->all();
+    $identitas = Identitas::find(1);
+    $identitas->update($data);
+    return view('pengaturan.umum.identitas')->with(compact('identitas'));
   }
 }
