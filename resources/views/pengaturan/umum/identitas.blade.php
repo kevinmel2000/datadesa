@@ -30,9 +30,7 @@
                   </ul>
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="form">
-                      {!! Form::model($member, ['url'=>route('members.update', $member->id), 'method'=>'put', 'files'=>'true', 'class'=>'form-horizontal']) !!}
-                      @include('pengaturan.umum._formidentitas')
-                      {!! Form::close() !!}
+                      
                     </div>
                   </div>
                 </div>
