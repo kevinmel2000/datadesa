@@ -15,12 +15,12 @@
                 <div class="panel-body">
                   <!--tab panel-->
                   <ul class="nav nav-tabs" role="tablist">
-                    <li class="active">
+                    <li>
                       <a href="agama">
                         Agama
                       </a>
                     </li>
-                    <li>
+                    <li class="active">
                       <a href="hubungan-keluarga">
                         Hubungan
                       </a>
@@ -70,24 +70,24 @@
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active"><br/>
                       <p>
-                        {!! link_to('pustaka/agama/create','Tambah Agama',['class'=>'btn btn-primary btn-sm']) !!}
+                        {!! link_to('pustaka/hubungan-keluarga/create','Tambah Hubungan Keluarga',['class'=>'btn btn-primary btn-sm']) !!}
                         <table class="table table-striped table-hover">
                           <thead>
                             <tr>
                               <th><strong>ID</strong></th>
-                              <th><strong>Nama Agama</strong></th>
+                              <th><strong>Hubungan Keluarga</strong></th>
                               <th width="15%"><strong>Aksi</strong></th>
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($agama as $a)
+                            @foreach($hubungan_keluarga as $h)
                               <tr>
-                                <td>{{ $a->id }}</td>
-                                <td>{{ $a->agama }}</td>
+                                <td>{{ $h->id }}</td>
+                                <td>{{ $h->hubungan_keluarga }}</td>
                                 <td>
-                                  {!! Form::open(array('method'=>'delete','url'=>'pustaka/agama/'.$a->id)) !!}
+                                  {!! Form::open(array('method'=>'delete','url'=>'pustaka/hubungan-keluarga/'.$h->id)) !!}
                                   {!! Form::hidden('_delete','DELETE') !!}
-                                  {!! link_to('pustaka/agama/'.$a->id.'/edit','Ubah',['class'=>'btn btn-warning btn-xs']) !!}
+                                  {!! link_to('pustaka/hubungan-keluarga/'.$h->id.'/edit','Ubah',['class'=>'btn btn-warning btn-xs']) !!}
                                   {!! Form::submit('Hapus',['class'=>'btn btn-danger btn-xs']) !!}
                                   {!! Form::close() !!}
                                 </td>
@@ -95,7 +95,7 @@
                             @endforeach
                           </tbody>
                         </table>
-                        {!! $agama->render() !!}
+                        {!! $hubungan_keluarga->render() !!}
                       </p>
                     </div>
                   </div>

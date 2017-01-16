@@ -8,7 +8,7 @@
           <ul class="breadcrumb">
             <li><a href="{{ url('/home') }}">Dashboard</a></li>
             <li><a href="{{ url('pustaka/agama') }}">Pustaka</a></li>
-            <li class="active">Ubah</li>
+            <li class="active">Ubah Agama</li>
           </ul>
           <!--breadcrumb-->
             <div class="panel panel-default">

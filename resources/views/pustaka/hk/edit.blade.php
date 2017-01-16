@@ -7,18 +7,18 @@
           <!--breadcrumb-->
           <ul class="breadcrumb">
             <li><a href="{{ url('/home') }}">Dashboard</a></li>
-            <li><a href="{{ url('pustaka/agama') }}">Pustaka</a></li>
-            <li class="active">Tambah Agama</li>
+            <li><a href="{{ url('pustaka/hubungan-keluarga') }}">Pustaka</a></li>
+            <li class="active">Ubah Hubungan Keluarga</li>
           </ul>
           <!--breadcrumb-->
             <div class="panel panel-default">
                 <div class="panel-heading">Daftar Pustaka</div>
                 <div class="panel-body">
                   <div class="col-md-8">
-                    {!! Form::open(array('url'=>'pustaka/agama')) !!}
-                    {!! link_to('pustaka/agama','Kelola Agama',['class'=>'btn btn-primary btn-sm']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success btn-sm']) !!}
+                    {!! Form::model($hubungan_keluarga, array('url'=>'pustaka/hubungan-keluarga/'.$hubungan_keluarga->id,'method'=>'patch')) !!}
+                    {!! link_to('pustaka/hubungan-keluarga','Kelola Hubungan Keluarga',['class'=>'btn btn-primary btn-sm']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success btn-sm']) !!}
                     <br><br>
-                    @include('pustaka.agama._form')
+                    @include('pustaka.hk._form')
                     {!! Form::close() !!}
                   </div>
                 </div>

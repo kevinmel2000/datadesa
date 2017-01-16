@@ -15,3 +15,4 @@ Route::put('pengaturan/umum', [
 ]);
 // pustaka
 Route::resource('pustaka/agama','Pustaka\AgamaController');
+Route::resource('pustaka/hubungan-keluarga','Pustaka\HubunganKeluargaController');
