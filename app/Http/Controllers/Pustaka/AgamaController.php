@@ -30,7 +30,7 @@ class AgamaController extends Controller
      */
     public function create()
     {
-        //
+      return view('pustaka.agama.create');
     }
 
     /**
@@ -41,7 +41,9 @@ class AgamaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $data=$request->all();
+      Agama::create($data);
+      return redirect('pustaka/agama');
     }
 
     /**
@@ -63,7 +65,8 @@ class AgamaController extends Controller
      */
     public function edit($id)
     {
-        //
+      $agama = Agama::find($id);
+      return view('pustaka.agama.edit', compact('agama'));
     }
 
     /**
@@ -75,7 +78,10 @@ class AgamaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $data=$request->all();
+      $agama = Agama::find($id);
+      $agama->update($data);
+      return redirect('pustaka/agama');
     }
 
     /**
@@ -86,6 +92,8 @@ class AgamaController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $agama = Agama::find($id);
+      $agama->delete();
+      return redirect('pustaka/agama');
     }
 }
