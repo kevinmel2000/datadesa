@@ -12,7 +12,7 @@ class PekerjaanSeeder extends Seeder
     public function run()
     {
       // kosongkan table libkecamatan
-      DB::table('pekerjaas')->delete();
+      DB::table('pekerjaans')->delete();
       // buat data berupa array untuk diinput ke database
       $pekerjaans = array(
         array('id'=>1, 'pekerjaan'=>'Belum / Tidak Bekerja', 'tipe'=>'A'),

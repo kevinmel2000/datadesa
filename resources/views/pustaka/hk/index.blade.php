@@ -26,42 +26,42 @@
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="pekerjaan">
                         Pekerjaan
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="pendidikan">
                         Pendidikan
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="penyalur-tki">
                         Penyalur TKI
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="status-kawin">
                         Status Kawin
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="status-tinggal">
                         Status Tinggal
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="jabatan">
                         Jabatan
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="surat">
                         Surat
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href="standar-kemiskinan">
                         Standar Kemiskinan
                       </a>
                     </li>

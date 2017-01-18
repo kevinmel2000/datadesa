@@ -4,9 +4,14 @@ namespace App\Http\Controllers\Pustaka;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Pekerjaan;
 
 class PekerjaanController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,8 @@ class PekerjaanController extends Controller
      */
     public function index()
     {
-        //
+      $pekerjaan = Pekerjaan::paginate(10);
+      return view('pustaka.pekerjaan.index', compact('pekerjaan'));
     }
 
     /**
@@ -24,7 +30,7 @@ class PekerjaanController extends Controller
      */
     public function create()
     {
-        //
+      return view('pustaka.pekerjaan.create');
     }
 
     /**
@@ -35,7 +41,9 @@ class PekerjaanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $data=$request->all();
+      Pekerjaan::create($data);
+      return redirect('pustaka/pekerjaan');
     }
 
     /**
@@ -57,7 +65,8 @@ class PekerjaanController extends Controller
      */
     public function edit($id)
     {
-        //
+      $pekerjaan = Pekerjaan::find($id);
+      return view('pustaka.pekerjaan.edit', compact('pekerjaan'));
     }
 
     /**
@@ -69,7 +78,10 @@ class PekerjaanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $data=$request->all();
+      $pekerjaan = Pekerjaan::find($id);
+      $pekerjaan->update($data);
+      return redirect('pustaka/pekerjaan');
     }
 
     /**
@@ -80,6 +92,8 @@ class PekerjaanController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $pekerjaan = Pekerjaan::find($id);
+      $pekerjaan->delete();
+      return redirect('pustaka/pekerjaan');
     }
 }
