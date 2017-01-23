@@ -17,3 +17,4 @@ Route::put('pengaturan/umum', [
 Route::resource('pustaka/agama','Pustaka\AgamaController');
 Route::resource('pustaka/hubungan-keluarga','Pustaka\HubunganKeluargaController');
 Route::resource('pustaka/pekerjaan','Pustaka\PekerjaanController');
+Route::resource('pustaka/pendidikan','Pustaka\PendidikanController');

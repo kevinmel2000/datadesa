@@ -7,18 +7,18 @@
           <!--breadcrumb-->
           <ul class="breadcrumb">
             <li><a href="{{ url('/home') }}">Dashboard</a></li>
-            <li><a href="{{ url('pustaka/pekerjaan') }}">Pustaka</a></li>
-            <li class="active">Tambah Pekerjaan</li>
+            <li><a href="{{ url('pustaka/pendidikan') }}">Pustaka</a></li>
+            <li class="active">Tambah Pendidikan</li>
           </ul>
           <!--breadcrumb-->
             <div class="panel panel-default">
                 <div class="panel-heading">Daftar Pustaka</div>
                 <div class="panel-body">
                   <div class="col-md-8">
-                    {!! Form::open(array('url'=>'pustaka/pekerjaan')) !!}
-                    {!! link_to('pustaka/pekerjaan','Kelola Pekerjaan',['class'=>'btn btn-primary btn-sm']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success btn-sm']) !!}
+                    {!! Form::open(array('url'=>'pustaka/pendidikan')) !!}
+                    {!! link_to('pustaka/pendidikan','Kelola Pendidikan',['class'=>'btn btn-primary btn-sm']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success btn-sm']) !!}
                     <br><br>
-                    @include('pustaka.pekerjaan._form')
+                    @include('pustaka.pendidikan._form')
                     {!! Form::close() !!}
                   </div>
                 </div>
