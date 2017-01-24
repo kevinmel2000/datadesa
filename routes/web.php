@@ -19,3 +19,4 @@ Route::resource('pustaka/hubungan-keluarga','Pustaka\HubunganKeluargaController'
 Route::resource('pustaka/pekerjaan','Pustaka\PekerjaanController');
 Route::resource('pustaka/pendidikan','Pustaka\PendidikanController');
 Route::resource('pustaka/penyalur-tki','Pustaka\PenyalurTkiController');
+Route::resource('pustaka/status-kawin','Pustaka\StatusKawinController');
