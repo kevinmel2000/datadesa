@@ -20,3 +20,4 @@ Route::resource('pustaka/pekerjaan','Pustaka\PekerjaanController');
 Route::resource('pustaka/pendidikan','Pustaka\PendidikanController');
 Route::resource('pustaka/penyalur-tki','Pustaka\PenyalurTkiController');
 Route::resource('pustaka/status-kawin','Pustaka\StatusKawinController');
+Route::resource('pustaka/status-tinggal','Pustaka\StatusTinggalController');
