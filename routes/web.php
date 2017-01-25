@@ -22,3 +22,4 @@ Route::resource('pustaka/penyalur-tki','Pustaka\PenyalurTkiController');
 Route::resource('pustaka/status-kawin','Pustaka\StatusKawinController');
 Route::resource('pustaka/status-tinggal','Pustaka\StatusTinggalController');
 Route::resource('pustaka/jabatan','Pustaka\JabatanController');
+Route::resource('pustaka/surat','Pustaka\SuratController');
