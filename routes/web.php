@@ -4,6 +4,7 @@ Route::get('/', function () {
 });
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+
 // pengaturan umum
 Route::get('pengaturan/umum', [
   'as'=>'pengaturan.edit',
@@ -13,6 +14,8 @@ Route::put('pengaturan/umum', [
   'as'=>'pengaturan.update',
   'uses'=>'Pengaturan\UmumController@update'
 ]);
+Route::resource('pengaturan/perangkat-desa','Pengaturan\PerangkatDesaController');
+
 // pustaka
 Route::resource('pustaka/agama','Pustaka\AgamaController');
 Route::resource('pustaka/hubungan-keluarga','Pustaka\HubunganKeluargaController');

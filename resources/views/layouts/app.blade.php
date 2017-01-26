@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/selectize.css" rel="stylesheet">
+    <link href="/css/selectize.bootstrap3.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -89,6 +91,8 @@
     <!--<script src="/js/app.js"></script>-->
     <script src="/js/jquery-3.1.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/selectize.min.js"></script>
+    <script src="/js/custom.js"></script>
     @yield('scripts')
 </body>
 </html>
