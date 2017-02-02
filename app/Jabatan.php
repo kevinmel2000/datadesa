@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jabatan extends Model
 {
+  protected $table = 'jabatans';
+
   protected $fillable = ['jabatan'];
 
   public function perangkat_desas()
   {
-    return $this->belongsTo('App\PerangkatDesa');
+    return $this->hasOne('App\PerangkatDesa');
   }
 }

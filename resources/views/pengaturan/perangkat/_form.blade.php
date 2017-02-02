@@ -3,7 +3,7 @@
 <br/>
 
 {!! Form::label('jabatan', 'Jabatan', ['class'=>'control-label']) !!}
-{!! Form::select('jabatan_id', [''=>'']+App\Jabatan::pluck('jabatan_id','id')->all(), null, ['class'=>'form-control js-selectize', 'placeholder'=>'Pilih Jabatan']) !!}
+{!! Form::select('jabatan_id', [''=>'']+App\Jabatan::pluck('jabatan','id')->all(), null, ['class'=>'form-control js-selectize', 'placeholder'=>'Pilih Jabatan']) !!}
 <br/>
 
 {!! Form::label('niap', 'NIAP', ['class'=>'control-label']) !!}

@@ -52,7 +52,7 @@
                               <tr>
                                 <td>{{ $prd->id }}</td>
                                 <td>{{ $prd->nama_perangkat }}</td>
-                                <td>{{ $prd->jabatan }}</td>
+                                <td>{{ $prd->jabatans->jabatan }}</td>
                                 <td>{{ $prd->niap }}</td>
                                 <td>{{ $prd->nip }}</td>
                                 <td>

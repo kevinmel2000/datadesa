@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pengaturan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\PerangkatDesa;
+use App\Jabatan;
 
 class PerangkatDesaController extends Controller
 {
@@ -19,6 +20,7 @@ class PerangkatDesaController extends Controller
    */
   public function index()
   {
+    $perangkat_desa = PerangkatDesa::where('jabatan_id')->with('jabatans')->get();
     $perangkat_desa = PerangkatDesa::paginate(10);
     return view('pengaturan.perangkat.index', compact('perangkat_desa'));
   }

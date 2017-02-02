@@ -16,7 +16,7 @@ class CreatePerangkatDesasTable extends Migration
         Schema::create('perangkat_desas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_perangkat');
-            $table->string('jabatan');
+            $table->integer('jabatan_id')->unsigned();
             $table->string('niap')->nullable();
             $table->string('nip')->nullable();
             $table->string('pangkat_golongan')->nullable();
@@ -24,6 +24,8 @@ class CreatePerangkatDesasTable extends Migration
             $table->string('no_tgl_keputusan_pemberhentian')->nullable();
             $table->string('keterangan')->nullable();
             $table->timestamps();
+
+            $table->foreign('jabatan_id')->references('id')->on('jabatans')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
