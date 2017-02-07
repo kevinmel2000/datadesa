@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWilayahAdministratifsTable extends Migration
+class CreateDusunsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateWilayahAdministratifsTable extends Migration
      */
     public function up()
     {
-        Schema::create('wilayah_administratifs', function (Blueprint $table) {
+        Schema::create('dusuns', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_dusun');
+            $table->integer('penduduk_desa_id')->unsigned()->nullable();
             $table->timestamps();
+
+            $table->foreign('penduduk_desa_id')->references('id')->on('penduduk_desas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -27,6 +30,6 @@ class CreateWilayahAdministratifsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wilayah_administratifs');
+        Schema::dropIfExists('dusuns');
     }
 }
